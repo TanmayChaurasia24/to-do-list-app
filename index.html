@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your To-Do List</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #3498db, #2c3e50);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        p {
+            opacity: 0;
+            animation: fadeIn 1s 0.5s forwards;
+        }
+
+        button {
+            background-color: #e74c3c;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            opacity: 0;
+            animation: fadeIn 1s 1s forwards;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        button:hover {
+            background-color: #c0392b;
+        }
+
+        ul {
+            display: block;
+            width: 100%;
+            height: inherit;
+            padding: 0;
+        }
+
+        li {
+            list-style-type: none;
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        li::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: -10%;
+            height: 20px;
+            width: 20px;
+            background: rgba(255, 255, 255, .2);
+            transform: translateY(-50%);
+        }
+
+        @media (min-width: 600px) {
+            li:nth-child(1) {
+                left: 10%;
+                height: 30px;
+                width: 30px;
+            }
+
+            li:nth-child(2) {
+                left: 30%;
+                height: 45px;
+                width: 45px;
+            }
+
+            li:nth-child(3) {
+                left: 50%;
+                height: 70px;
+                width: 70px;
+            }
+
+            li:nth-child(4) {
+                left: 80%;
+                height: 20px;
+                width: 20px;
+            }
+
+            li:nth-child(5) {
+                left: 20%;
+                height: 30px;
+                width: 30px;
+            }
+
+            li:nth-child(6) {
+                left: 35%;
+                height: 45px;
+                width: 45px;
+            }
+
+            li:nth-child(7) {
+                left: 70%;
+                height: 70px;
+                width: 70px;
+            }
+
+            li:nth-child(8) {
+                left: 15%;
+                height: 20px;
+                width: 20px;
+            }
+        }
+
+        li {
+            animation: animate 10s linear 1s infinite;
+        }
+
+        @keyframes animate {
+            from {
+                transform: translateY(+1500%) rotate(180deg)
+            }
+
+            to {
+                transform: translateY(-150%) rotate(360deg)
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Your To-Do List</h1>
+    <p>Welcome to the ultimate productivity tool.</p>
+    <button><a href="app.html">Get Started</a></button>
+    <main class="app">
+        <div class="boxes">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>
